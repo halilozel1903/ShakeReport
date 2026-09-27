@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name="io.github.halilozel1903.shakereport.ShakeReportActivity"
+            android:exported="false"
+            android:label="@string/shakereport_title"
+            android:theme="@style/ShakeReport.Theme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Own subclass and authority, so it never clashes with the app's FileProvider. -->
+        <provider
+            android:name="io.github.halilozel1903.shakereport.ShakeReportFileProvider"
+            android:authorities="${applicationId}.shakereport.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/shakereport_file_paths" />
+        </provider>
+    </application>
+
+</manifest>

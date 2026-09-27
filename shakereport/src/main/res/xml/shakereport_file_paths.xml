@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Reports are written to cacheDir/shakereport/ only. -->
+    <cache-path
+        name="shakereport"
+        path="shakereport/" />
+</paths>
